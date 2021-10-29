@@ -1,0 +1,46 @@
+.cookie{
+    padding-bottom: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    &.show{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+    &__container{
+        padding: 22px 20px;
+        background: #E8E8E8;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    &__button{
+        width: 200px;
+        padding: 16px;
+        font-size: 18px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+        background: #1CBB49;
+        border-radius: 8px;
+        margin-left: 24px;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            background: darken(#1CBB49, 5%);
+        }
+    }
+    &__text{
+        font-size: 16px;
+        line-height: 140%;
+        color: #444444;
+    }
+}

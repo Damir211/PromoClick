@@ -1,0 +1,118 @@
+.social{
+    .container{
+        display: flex;
+    }
+    &__info{
+        padding-left: 20px;
+        padding-top: 50px;
+    }
+    &__list{
+        padding-left: 0;
+        list-style: none;
+        font-size: 22px;
+        line-height: 140%;
+        color: #444444;
+        margin-bottom: 20px;
+        li{
+            position: relative;
+            &::before{
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background: #ED5736;
+                content: '';
+                position: absolute;
+                left: -21px;
+                top: 8px;
+            }
+        }
+    }
+    &__text-red{
+        font-size: 22px;
+        line-height: 140%;
+        color: #ED5736;
+    }
+    &__imgs{
+        width: 615px;
+        height: 445px;
+        position: relative;
+        margin-left: 25px;
+        flex-shrink: 0;
+        img{
+            animation: swing 3s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            &:nth-child(2){
+                animation-delay: 0.5s;
+            }
+            &:nth-child(3){
+                animation-delay: 1s;
+            }
+            &:nth-child(4){
+                animation-delay: 1.5s;
+            }
+            &:nth-child(5){
+                animation-delay: 2s;
+            }
+            &:nth-child(6){
+                animation-delay: 2.5s;
+            }
+            &:nth-child(7){
+                animation-delay: 3s;
+            }
+            &:nth-child(8){
+                animation-delay: 3.5s;
+            }
+        }
+    }
+    &__facebook{
+        position: absolute;
+        bottom: 121px;
+        right: 33px;
+    }
+    &__instagramm{
+        position: absolute;
+        bottom: 154px;
+        right: 184px;
+    }
+    &__mymir{
+        position: absolute;
+        bottom: 90px;
+        left: 45px;
+    }
+    &__skype{
+        position: absolute;
+        top: 206px;
+        left: 118px;
+    }
+    &__telegramm{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__viber{
+        position: absolute;
+        bottom: 0;
+        left: 168px;
+    }
+    &__watsapp{
+        position: absolute;
+        top: 50px;
+        left: 205px;
+    }
+    &__vk{
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+}
+
+@keyframes swing {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    30%{
+        transform: translate(5px, 5px);
+    }
+    100%{
+        transform: translate(-5px, -2px);
+    }
+}

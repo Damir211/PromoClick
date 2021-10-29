@@ -1,0 +1,90 @@
+.logo{
+    cursor: pointer;
+    position: relative;
+    margin-right: 30px;
+    &:hover{
+        .logo__cursor-pointer{
+            opacity: 1;
+        }
+        .logo__cursor-default{
+            opacity: 0;
+        }
+    }
+    &__cursor{
+        &-default, &-pointer{
+            position: absolute;
+            bottom: -15px;
+        }
+        &-default{
+            right: -5px;
+
+        }
+        &-pointer{
+            right: 0;
+            opacity: 0;
+        }
+    }
+}
+.header{
+    padding: 30px 0;
+    border-bottom: 2px solid #E8E8E8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 8;
+    .logo.pointer{
+        .logo__cursor-pointer{
+            opacity: 1;
+        }
+        .logo__cursor-default{
+            opacity: 0;
+        }
+    }
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+    }
+    &__link{
+        font-size: 16px;
+        line-height: 140%;
+        color: #444444;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            color: #ED5736;
+        }
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+    &__block{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+    &__tel{
+        font-family: 'Nunito';
+        font-weight: 600;
+        color: #444444;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            color: #ED5736;
+        }
+    }
+    &__menubtn{
+        margin-left: 10px;
+        display: none;
+    }
+    .button{
+        margin-left: 20px;
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+}
