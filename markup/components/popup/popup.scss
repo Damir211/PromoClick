@@ -152,6 +152,10 @@
             border: 6px solid #158AD9;
             position: relative;
             padding: 5px;
+            img{
+                width: 140px;
+                height: 140px;
+            }
             &::after{
                 position: absolute;
                 left: 30px;
@@ -174,7 +178,6 @@
                 position: relative;
                 z-index: 2;
             }
-
         }
         &-logo{
             display: flex;

@@ -39,7 +39,7 @@ if(document.getElementById('phone-mask')){
     let documentPhoneInput = document.getElementById('phone-mask');
     let phoneMask = IMask(
         documentPhoneInput, {
-            mask: '+{7} (000) 000 00-00',
+            mask: '+{7} (000) 000 00 00',
         });
     documentPhoneInput.onfocus = function(){
         if(this.value.length === 0){
