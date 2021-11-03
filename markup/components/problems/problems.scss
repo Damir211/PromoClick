@@ -18,10 +18,10 @@
         z-index: -1;
     }
     &__title{
-        font-weight: bold;
-        font-size: 35px;
+        font-size: 22px;
         line-height: 140%;
-        color: #ED5736;
+        color: #444444;
+        transition: 0.3s;
         margin-bottom: 20px;
         transition: 0.3s;
     }
@@ -48,6 +48,8 @@
         margin-right: 15px;
         width: calc(33.33333333% - 30px);
         transition: 0.3s;
+        display: flex;
+        flex-direction: column;
         &:hover{
             transform: scale(1.05);
             background-color: #ED5736;

@@ -67,10 +67,9 @@
         padding: 30px 30px 55px 30px;
     }
     .problems__title{
-        font-size: 30px;
         margin-bottom: 15px;
     }
-    .problems__text{
+    .problems__text, .problems__title{
         font-size: 20px;
     }
     .useful__block{
@@ -312,11 +311,9 @@
         padding-bottom: 30px;
     }
     .problems__title{
-        font-size: 21px;
-        line-height: 140%;
         margin-bottom: 10px;
     }
-    .problems__text{
+    .problems__text, .problems__title{
         font-size: 16px;
         line-height: 140%;
     }
@@ -404,6 +401,15 @@
     .header{
         .button{
             margin-left: 0;
+        }
+        &::before{
+            content: '';
+            bottom: calc(100% - 1px);
+            left: 0;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            background: #fff;
         }
     }
     .header.scrolled{

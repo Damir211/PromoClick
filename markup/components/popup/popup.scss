@@ -102,6 +102,7 @@
         color: #444444;
     }
     &__button{
+        display: inline-block;
         padding: 16px;
         background: #ED5736;
         border-radius: 8px;
@@ -113,6 +114,12 @@
         margin-top: 20px;
         cursor: pointer;
         transition: 0.3s;
+        border: none;
+        outline: none;
+        &.disabled{
+            opacity: 0.4;
+            pointer-events: none;
+        }
         &:hover{
             background: #FF6231;
         }
