@@ -1,3 +1,60 @@
+<!-- pixels -->
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(86224115, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/86224115" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211690642-1">
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-211690642-1');
+</script>
+
+
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK-RTRG-1130862-hDCSh"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1130862-hDCSh" style="position:fixed; left:-999px;" alt=""/></noscript>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1297452014023410');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1297452014023410&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- pixels-end -->
+
+
 <div class="popup popup-contact">
     <div class="popup__container">
         <div class="popup__close">
@@ -39,7 +96,7 @@
                         Я даю согласие на получение рассылки о предложениях, информации о продуктах/услугах и иной рекламной информации.
                     </div>
                 </label>
-                <a href="./thanks.html" class="popup__button disabled require-or-button">
+                <a href="#" class="popup__button disabled require-or-button" id="send-form">
                     Отправить
                 </a>
             </div>
@@ -65,40 +122,91 @@
             </a>
         </div>
     </div>
+    <script>
+        fbq('track', 'Lеad');
+    </script>
 </div>
 
+<script>
+    const sendFormButton = document.getElementById('send-form');
+    sendFormButton.addEventListener('click', function(){
+        const popupContainer = document.querySelector('.popup-contact');
+        popupThanksOpen();
+        popupContainer.classList.remove('active');
+    })
+</script>
+
+
+<div class="popup popup-send">
+    <div class="popup__container">
+        <div class="popup__close popup__close-send">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0395 19.9864L39.4247 3.26802C39.7827 2.90004 39.9806 2.40615 39.9752 1.89374C39.9698 1.38134 39.7617 0.891652 39.396 0.53118C39.2154 0.352948 39.0011 0.212243 38.7655 0.116996C38.5299 0.0217491 38.2776 -0.0260105 38.0233 -0.0235984C37.769 -0.0211864 37.5178 0.0313878 37.2841 0.131087C37.0503 0.230787 36.8387 0.375519 36.6615 0.557146L20.3049 17.2497L3.27129 0.53118C3.09054 0.353105 2.87623 0.212461 2.64063 0.117313C2.40503 0.0221642 2.15284 -0.025535 1.89862 -0.0231235C1.64441 -0.0207119 1.39314 0.0318031 1.1594 0.131404C0.92566 0.231005 0.714076 0.375674 0.536767 0.557146C0.178394 0.924794 -0.0199251 1.41855 -0.0150489 1.93095C-0.0101727 2.44336 0.197451 2.93302 0.562756 3.29383L17.5717 19.9864L0.562756 36.679C0.197451 37.0398 -0.0101727 37.5297 -0.0150489 38.0421C-0.0199251 38.5545 0.178394 39.0482 0.536767 39.4159C0.713896 39.5977 0.9254 39.7426 1.15916 39.8424C1.39292 39.9422 1.64431 39.9948 1.89862 39.9973C2.15294 39.9997 2.40516 39.9518 2.64079 39.8565C2.87641 39.7612 3.09072 39.6201 3.27129 39.4417L20.3049 22.7233L36.6615 39.4159C36.8409 39.6006 37.0558 39.7474 37.2934 39.8476C37.5309 39.9479 37.7863 39.9996 38.0444 39.9995C38.2959 40.0004 38.5452 39.9516 38.7777 39.8559C39.0102 39.7601 39.2212 39.6193 39.3987 39.4417C39.7643 39.0812 39.9724 38.5917 39.9777 38.0793C39.9831 37.5669 39.7853 37.073 39.4273 36.705L23.0395 19.9864Z" fill="#ED5736"/>
+            </svg>
+        </div>
+        <div class="popup__block">
+            <div class="popup__info">
+                <div class="popup__title">
+                    Получите наши <span>кейсы</span>!
+                </div>
+                <div class="popup__text">
+                    Оставьте свой e-mail и мы пришлем Вам презентацию с&nbsp;нашими кейсами!
+                </div>
+            </div>
+            <div class="popup__form">
+                <div class="input">
+                    <input type="text" class="disabled-button-email" placeholder="Введите адрес электронной почты">
+                </div>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <div class="checkbox__icon"></div>
+                    <div class="checkbox__text">
+                        Настоящим подтверждаю, что я ознакомлен <a href="./doc/politic.pdf" data-type="pdf" data-fancybox>с&nbsp;Политикой конфиденциальности</a> и согласен на обработку персональных данных.
+                    </div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <div class="checkbox__icon"></div>
+                    <div class="checkbox__text">
+                        Я даю согласие на получение рассылки о предложениях, информации о продуктах/услугах и иной рекламной информации.
+                    </div>
+                </label>
+                <a href="#" class="popup__button disabled button-email" id="send-form2">
+                    Отправить
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const sendFormButton2 = document.getElementById('send-form2');
+    sendFormButton2.addEventListener('click', function(){
+        const popupContainer = document.querySelector('.popup-send');
+        popupThanksOpen();
+        popupContainer.classList.remove('active');
+    })
+</script>
+
+<div class="popup popup-thanks">
+    <div class="popup__container">
+        <div class="popup__close popup__close-thanks">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0395 19.9864L39.4247 3.26802C39.7827 2.90004 39.9806 2.40615 39.9752 1.89374C39.9698 1.38134 39.7617 0.891652 39.396 0.53118C39.2154 0.352948 39.0011 0.212243 38.7655 0.116996C38.5299 0.0217491 38.2776 -0.0260105 38.0233 -0.0235984C37.769 -0.0211864 37.5178 0.0313878 37.2841 0.131087C37.0503 0.230787 36.8387 0.375519 36.6615 0.557146L20.3049 17.2497L3.27129 0.53118C3.09054 0.353105 2.87623 0.212461 2.64063 0.117313C2.40503 0.0221642 2.15284 -0.025535 1.89862 -0.0231235C1.64441 -0.0207119 1.39314 0.0318031 1.1594 0.131404C0.92566 0.231005 0.714076 0.375674 0.536767 0.557146C0.178394 0.924794 -0.0199251 1.41855 -0.0150489 1.93095C-0.0101727 2.44336 0.197451 2.93302 0.562756 3.29383L17.5717 19.9864L0.562756 36.679C0.197451 37.0398 -0.0101727 37.5297 -0.0150489 38.0421C-0.0199251 38.5545 0.178394 39.0482 0.536767 39.4159C0.713896 39.5977 0.9254 39.7426 1.15916 39.8424C1.39292 39.9422 1.64431 39.9948 1.89862 39.9973C2.15294 39.9997 2.40516 39.9518 2.64079 39.8565C2.87641 39.7612 3.09072 39.6201 3.27129 39.4417L20.3049 22.7233L36.6615 39.4159C36.8409 39.6006 37.0558 39.7474 37.2934 39.8476C37.5309 39.9479 37.7863 39.9996 38.0444 39.9995C38.2959 40.0004 38.5452 39.9516 38.7777 39.8559C39.0102 39.7601 39.2212 39.6193 39.3987 39.4417C39.7643 39.0812 39.9724 38.5917 39.9777 38.0793C39.9831 37.5669 39.7853 37.073 39.4273 36.705L23.0395 19.9864Z" fill="#ED5736"/>
+            </svg>
+        </div>
+        <div class="popup__block">
+            <div class="popup__info">
+                <div class="popup__title">
+                    Спасибо за обращение к нам!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="button-up">
     <img src="./static/img/general/page-up.svg" alt="">
     <img src="./static/img/general/page-up-mobile.svg" alt="">
 </div>
 
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(86224115, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-    });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/86224115" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211690642-1">
-</script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-211690642-1');
-</script>

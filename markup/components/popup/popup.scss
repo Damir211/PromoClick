@@ -291,3 +291,22 @@ input{
         }
     }
 }
+@media only screen and (min-width: 751px) {
+    .popup.popup-send .popup__form{
+        min-height: 389px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .popup-thanks.popup .popup__info,
+    .popup-thanks.popup .popup__block{
+        width: 100%;
+    }
+    .popup-thanks.popup .popup__container{
+        max-width: 650px;
+        padding: 90px 110px 90px 110px;
+    }
+    .popup.popup-send .popup__container{
+        padding: 90px 110px 90px 110px;
+    }
+}

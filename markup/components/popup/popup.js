@@ -1,14 +1,38 @@
 const buttonsPopup = document.querySelectorAll('.popup-contact-open');
 const popupContainer = document.querySelector('.popup-contact');
+const popupContainerSend = document.querySelector('.popup-send');
+const popupContainerThanks = document.querySelector('.popup-thanks');
 const popupClose = document.querySelectorAll('.popup__close');
 const buttonUpScroll = document.querySelector('.button-up');
 const utmLinksArray = document.querySelectorAll('.utm-link-tel');
 const popupInputs = document.querySelectorAll('.require-or');
 const popupInputsButton = document.querySelector('.require-or-button');
+const popupInputEmail = document.querySelector('.disabled-button-email');
+const buttonEmail = document.querySelector('.button-email');
+
+setTimeout(function () {
+    popupContainerSend.classList.add('active');
+    document.body.classList.add('no-scroll');
+}, 10000);
+
+popupInputEmail.addEventListener('input', function () {
+    let emailVal = popupInputEmail.value;
+    if(validateEmail(emailVal)){
+        buttonEmail.classList.remove('disabled');
+    }else{
+        buttonEmail.classList.add('disabled');
+    }
+})
 
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+function popupThanksOpen(){
+    popupContainerThanks.classList.add('active');
+    document.body.classList.add('no-scroll');
+
 }
 let validatePopupForm = false;
 popupInputs.forEach(function (item) {
@@ -47,6 +71,7 @@ function getParameterByName(name) {
 
 // Give the URL parameters variable names
 let content = getParameterByName('utm_content');
+let medium = getParameterByName('utm_medium');
 
 const utmNames = [
     {
@@ -137,10 +162,17 @@ const utmNames = [
 if(content.length > 0){
     utmNames.forEach(function (item) {
         if(item.utmList.some((item) => item === content)){
-            console.log('есть совпадение');
             defaultPhoneNumber = item.phoneInfo;
         }
-    })
+    });
+}
+if(medium.length > 0){
+    if(medium === 'facebook_insta_lenta'){
+        defaultPhoneNumber = {
+            text: '+7 499 677 16 58',
+            link: 'tel:+74996771658'
+        }
+    }
 }
 
 utmLinksArray.forEach(function (item) {
@@ -167,8 +199,20 @@ if(buttonsPopup.length > 0){
 if(popupClose.length > 0){
     popupClose.forEach(function (item) {
         item.addEventListener('click', function () {
-            popupContainer.classList.remove('active');
-            document.body.classList.remove('no-scroll');
+            if(item.classList.contains('popup__close-send')){
+                popupContainerSend.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                setTimeout(function () {
+                    popupContainerSend.classList.add('active');
+                    document.body.classList.add('no-scroll');
+                }, 60000);
+            }else if(item.classList.contains('popup__close-thanks')){
+                popupContainerThanks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }else{
+                popupContainer.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
         })
     })
 }
@@ -178,6 +222,23 @@ popupContainer.addEventListener('click', function (e) {
         document.body.classList.remove('no-scroll');
     }
 })
+popupContainerSend.addEventListener('click', function (e) {
+    if(e.target === this){
+        popupContainerSend.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+        setTimeout(function () {
+            popupContainerSend.classList.add('active');
+            document.body.classList.add('no-scroll');
+        }, 60000);
+    }
+})
+popupContainerThanks.addEventListener('click', function (e) {
+    if(e.target === this){
+        popupContainerThanks.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+})
+
 
 window.addEventListener('scroll', function(e) {
     if(getBodyScrollTop() > window.innerHeight && getBodyScrollTop() < (document.body.offsetHeight - window.innerHeight - 200)){
